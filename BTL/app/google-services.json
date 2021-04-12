@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "745679579609",
+    "project_id": "btlltdd",
+    "storage_bucket": "btlltdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745679579609:android:b7030c997a345ed44411c8",
+        "android_client_info": {
+          "package_name": "com.example.btl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745679579609-75adtn7uju6fcctn5tv1b29o543i6jsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-7iZ2rEtNFyq5cyvtOfVdxLXKRHCOiYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745679579609-75adtn7uju6fcctn5tv1b29o543i6jsd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
