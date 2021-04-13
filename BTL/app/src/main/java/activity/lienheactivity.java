@@ -94,7 +94,7 @@ public class lienheactivity extends AppCompatActivity {
                         break;
                     case 3:
                         if(Checkconect.haveNetworkConnection(getApplicationContext())){
-                            Intent intent =new Intent(lienheactivity.this,lienheactivity.class);
+                            Intent intent =new Intent(lienheactivity.this,phukienactivity.class);
                             intent.putExtra("idLoaiSanPham",mangloaisp.get(position).getId());
                             startActivity(intent);
                         }else{
@@ -103,6 +103,16 @@ public class lienheactivity extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case 4:
+                        if(Checkconect.haveNetworkConnection(getApplicationContext())){
+                            Intent intent =new Intent(lienheactivity.this,lienheactivity.class);
+                            intent.putExtra("idLoaiSanPham",mangloaisp.get(position).getId());
+                            startActivity(intent);
+                        }else{
+                            Checkconect.showtoast_short(getApplicationContext(),"Bạn kiểm tra lại kết nối!");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 5:
                         if(Checkconect.haveNetworkConnection(getApplicationContext())){
                             Intent intent =new Intent(lienheactivity.this,thongtinactivity.class);
                             intent.putExtra("idLoaiSanPham",mangloaisp.get(position).getId());
@@ -135,8 +145,8 @@ public class lienheactivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-                mangloaisp.add(3,new loaisp(0, "Lien He","https://loading.io/s/icon/2nmu0k.png"));
-                mangloaisp.add(4,new loaisp(0, "Thong Tin","https://loading.io/s/icon/8jlasu.png"));
+                mangloaisp.add(4,new loaisp(0, "Lien He","https://loading.io/s/icon/2nmu0k.png"));
+                mangloaisp.add(5,new loaisp(0, "Thong Tin","https://loading.io/s/icon/8jlasu.png"));
             }
         }, new Response.ErrorListener() {
             @Override

@@ -113,7 +113,7 @@ public class MainActivity2 extends AppCompatActivity {
                         break;
                     case 3:
                         if(Checkconect.haveNetworkConnection(getApplicationContext())){
-                            Intent intent =new Intent(MainActivity2.this,lienheactivity.class);
+                            Intent intent =new Intent(MainActivity2.this,phukienactivity.class);
                             intent.putExtra("idLoaiSanPham",mangloaisp.get(position).getId());
                             startActivity(intent);
                         }else{
@@ -122,6 +122,16 @@ public class MainActivity2 extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case 4:
+                        if(Checkconect.haveNetworkConnection(getApplicationContext())){
+                            Intent intent =new Intent(MainActivity2.this,lienheactivity.class);
+                            intent.putExtra("idLoaiSanPham",mangloaisp.get(position).getId());
+                            startActivity(intent);
+                        }else{
+                            Checkconect.showtoast_short(getApplicationContext(),"Bạn kiểm tra lại kết nối!");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 5:
                         if(Checkconect.haveNetworkConnection(getApplicationContext())){
                             Intent intent =new Intent(MainActivity2.this,thongtinactivity.class);
                             intent.putExtra("idLoaiSanPham",mangloaisp.get(position).getId());
@@ -189,8 +199,8 @@ public class MainActivity2 extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-                mangloaisp.add(3,new loaisp(0, "Lien He","https://loading.io/s/icon/2nmu0k.png"));
-                mangloaisp.add(4,new loaisp(0, "Thong Tin","https://loading.io/s/icon/8jlasu.png"));
+                mangloaisp.add(4,new loaisp(0, "Liên Hệ","https://loading.io/s/icon/2nmu0k.png"));
+                mangloaisp.add(5,new loaisp(0, "Thông Tin","https://loading.io/s/icon/8jlasu.png"));
             }
         }, new Response.ErrorListener() {
             @Override

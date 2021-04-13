@@ -68,12 +68,23 @@ public class phoneactivity extends AppCompatActivity {
             getdulieuloaisp();
             clickitemlistview();
             getdata(page);
+            loadata();
         }
         else {
             Checkconect.showtoast_short(getApplicationContext(),"Kiem tra lai ket noi INTERNET cua ban!");
             finish();
         }
 
+    }
+    private void loadata() {
+        listViewphone.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                Intent intent= new Intent(getApplicationContext(),chitietspactivity.class);
+                intent.putExtra("thongtinsanpham",mangphone.get(i));
+                startActivity(intent);
+            }
+        });
     }
 
     private void getdata(int Page) {
@@ -157,7 +168,7 @@ public class phoneactivity extends AppCompatActivity {
                         break;
                     case 3:
                         if(Checkconect.haveNetworkConnection(getApplicationContext())){
-                            Intent intent =new Intent(phoneactivity.this,lienheactivity.class);
+                            Intent intent =new Intent(phoneactivity.this,phukienactivity.class);
                             intent.putExtra("idLoaiSanPham",mangloaisp.get(position).getId());
                             startActivity(intent);
                         }else{
@@ -166,6 +177,16 @@ public class phoneactivity extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case 4:
+                        if(Checkconect.haveNetworkConnection(getApplicationContext())){
+                            Intent intent =new Intent(phoneactivity.this,lienheactivity.class);
+                            intent.putExtra("idLoaiSanPham",mangloaisp.get(position).getId());
+                            startActivity(intent);
+                        }else{
+                            Checkconect.showtoast_short(getApplicationContext(),"Bạn kiểm tra lại kết nối!");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 5:
                         if(Checkconect.haveNetworkConnection(getApplicationContext())){
                             Intent intent =new Intent(phoneactivity.this,thongtinactivity.class);
                             intent.putExtra("idLoaiSanPham",mangloaisp.get(position).getId());
@@ -198,8 +219,8 @@ public class phoneactivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-                mangloaisp.add(3,new loaisp(0, "Lien He","https://loading.io/s/icon/2nmu0k.png"));
-                mangloaisp.add(4,new loaisp(0, "Thong Tin","https://loading.io/s/icon/8jlasu.png"));
+                mangloaisp.add(4,new loaisp(0, "Lien He","https://loading.io/s/icon/2nmu0k.png"));
+                mangloaisp.add(5,new loaisp(0, "Thong Tin","https://loading.io/s/icon/8jlasu.png"));
             }
         }, new Response.ErrorListener() {
             @Override

@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="xanh">#ADD8E6</color>
     <color name="red">#B93F3F</color>
-
+    <color name="xanhwhite">#CCFFFF</color>
+    <color name="dennhat">#C0C0C0</color>
 </resources>

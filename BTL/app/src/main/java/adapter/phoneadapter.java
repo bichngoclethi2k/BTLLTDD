@@ -50,11 +50,11 @@ public class phoneadapter extends BaseAdapter {
         if (convertView==null){
             viewHolder=new ViewHolder();//thiếu dòng khởi tạo
             LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView= inflater.inflate(R.layout.dong_phone, null);
-            viewHolder.txttenspphone=(TextView)convertView.findViewById(R.id.txtviewtenspphone);
-            viewHolder.txtgiaspphone=(TextView)convertView.findViewById(R.id.txtviewgiaspphone);
-            viewHolder.txtmotaspphone=(TextView)convertView.findViewById(R.id.txtviewmotaphone);
-            viewHolder.imgphone=(ImageView)convertView.findViewById(R.id.imageviewphone);
+            convertView= inflater.inflate(R.layout.dong_chung, null);
+            viewHolder.txttenspphone=(TextView)convertView.findViewById(R.id.txtviewtenspchung);
+            viewHolder.txtgiaspphone=(TextView)convertView.findViewById(R.id.txtviewgiaspchung);
+            viewHolder.txtmotaspphone=(TextView)convertView.findViewById(R.id.txtviewmotachung);
+            viewHolder.imgphone=(ImageView)convertView.findViewById(R.id.imageviewchung);
             convertView.setTag(viewHolder);
         }
         else{

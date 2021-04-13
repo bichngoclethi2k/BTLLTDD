@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTL">
-        <activity android:name="activity.thongtinactivity"></activity>
+        <activity android:name="activity.chitietspactivity"></activity>
+        <activity android:name="activity.phukienactivity" />
+        <activity android:name="activity.thongtinactivity" />
         <activity android:name="activity.lienheactivity" />
         <activity android:name="activity.laptopactivity" />
         <activity android:name="activity.phoneactivity" />

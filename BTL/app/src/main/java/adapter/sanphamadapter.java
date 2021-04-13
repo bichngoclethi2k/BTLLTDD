@@ -1,6 +1,7 @@
 package adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import com.squareup.picasso.Picasso;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import activity.chitietspactivity;
 import model.sanpham;
 
 public class sanphamadapter extends RecyclerView.Adapter<sanphamadapter.ItemHolder> {
@@ -63,6 +65,16 @@ public class sanphamadapter extends RecyclerView.Adapter<sanphamadapter.ItemHold
             imghinhsanpham= (ImageView) itemView.findViewById(R.id.imgviewsanpham);
             txttensp=(TextView)itemView.findViewById(R.id.txtviewtensp);
             txtgiasp=(TextView)itemView.findViewById(R.id.txtviewgiasp);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent= new Intent(context, chitietspactivity.class);
+                    intent.putExtra("thongtinsanpham",arraysanpham.get(getAdapterPosition()));
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

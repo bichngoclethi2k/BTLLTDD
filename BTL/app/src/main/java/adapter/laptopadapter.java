@@ -50,11 +50,11 @@ public class laptopadapter extends BaseAdapter {
         if (convertView==null){
             viewHolder=new ViewHolder();//thiếu dòng khởi tạo
             LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView= inflater.inflate(R.layout.dong_laptop, null);
-            viewHolder.txttensplaptop=(TextView)convertView.findViewById(R.id.txtviewtensplaptop);
-            viewHolder.txtgiasplaptop=(TextView)convertView.findViewById(R.id.txtviewgiasplaptop);
-            viewHolder.txtmotasplaptop=(TextView)convertView.findViewById(R.id.txtviewmotalaptop);
-            viewHolder.imglaptop=(ImageView)convertView.findViewById(R.id.imageviewlaptop);
+            convertView= inflater.inflate(R.layout.dong_chung, null);
+            viewHolder.txttensplaptop=(TextView)convertView.findViewById(R.id.txtviewtenspchung);
+            viewHolder.txtgiasplaptop=(TextView)convertView.findViewById(R.id.txtviewgiaspchung);
+            viewHolder.txtmotasplaptop=(TextView)convertView.findViewById(R.id.txtviewmotachung);
+            viewHolder.imglaptop=(ImageView)convertView.findViewById(R.id.imageviewchung);
             convertView.setTag(viewHolder);
         }
         else{
