@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context="activity.chitietspactivity">
     <androidx.appcompat.widget.Toolbar
@@ -15,6 +15,7 @@
 
     </androidx.appcompat.widget.Toolbar>
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -44,22 +45,33 @@
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-            <Spinner
-                android:layout_margin="20dp"
-                android:textAlignment="center"
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
+            <LinearLayout
 
-            </Spinner>
-            <Button
-                android:textColor="@color/red"
-                android:text="Them Vao Gio"
-                android:id="@+id/buttonmua"
-                android:textSize="15sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <Spinner
+                    android:layout_margin="3dp"
+                    android:padding="10dp"
+                    android:background="@drawable/spinner"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                </Spinner>
+                <Button
+                    android:textColor="@color/red"
+                    android:text="Mua Ngay"
+                    android:id="@+id/buttonmua"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
 
         </LinearLayout>
 

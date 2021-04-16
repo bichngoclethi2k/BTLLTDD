@@ -55,6 +55,7 @@ public class MainActivity2 extends AppCompatActivity {
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";
+    public static ArrayList<model.giohang> manggiohang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -256,6 +257,12 @@ public class MainActivity2 extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerView.setAdapter(sanphamadapter);
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(2,20,true));
+        if (manggiohang!=null){
+
+        }
+        else{
+            manggiohang= new ArrayList<>();
+        }
     }
 
 }
