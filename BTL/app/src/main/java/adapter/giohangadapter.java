@@ -15,6 +15,7 @@ import com.squareup.picasso.Picasso;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import activity.MainActivity2;
 import model.giohang;
 
 public class giohangadapter extends BaseAdapter {
@@ -48,7 +49,7 @@ public class giohangadapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        ViewHolder viewHolder = null;
+        ViewHolder viewHolder ;
         if (view == null){
             viewHolder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -67,11 +68,74 @@ public class giohangadapter extends BaseAdapter {
         viewHolder.txttengiohang.setText(giohang.getTensp());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         viewHolder.txtgiagiohang.setText(decimalFormat.format(giohang.getGiasp()) + " Đ");
-        Picasso.with(context).load(giohang.getHinhsp())
-                .placeholder(R.drawable.noimage)
-                .error(R.drawable.error)
+        Picasso.get().load(giohang.getHinhsp())
                 .into(viewHolder.imggiohang);
-        viewHolder.btnvalues.setText(giohang.getSoluongsp());
+        viewHolder.btnvalues.setText(giohang.getSoluongsp()+"");
+        int sl= Integer.parseInt(viewHolder.btnvalues.getText().toString());
+        if(sl>=10){
+            viewHolder.btnplus.setVisibility(View.INVISIBLE);
+            viewHolder.btnminus.setVisibility(View.VISIBLE);
+
+        }
+        else if(sl<=1){
+            viewHolder.btnminus.setVisibility(View.INVISIBLE);
+
+        }
+        else if(sl>=1){
+            viewHolder.btnminus.setVisibility(View.VISIBLE);
+            viewHolder.btnplus.setVisibility(View.VISIBLE);
+        }
+
+        viewHolder.btnplus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int slmoi = Integer.parseInt(viewHolder.btnvalues.getText().toString())+1;
+                int slhientai= MainActivity2.manggiohang.get(i).getSoluongsp();
+                long giaht=MainActivity2.manggiohang.get(i).getGiasp();
+
+                MainActivity2.manggiohang.get(i).setSoluongsp(slmoi);       //2-600
+                long giamoi=(giaht*slmoi)/slhientai;                       //3-?
+                MainActivity2.manggiohang.get(i).setGiasp(giamoi);
+                DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+                viewHolder.txtgiagiohang.setText(decimalFormat.format(giamoi) + " Đ");
+                activity.giohang.evenutil();
+                if (slmoi>9){
+                    viewHolder.btnplus.setVisibility(View.INVISIBLE);
+                    viewHolder.btnminus.setVisibility(View.VISIBLE);
+                    viewHolder.btnvalues.setText(String.valueOf(slmoi));
+                }
+                else {
+                    viewHolder.btnminus.setVisibility(View.VISIBLE);
+                    viewHolder.btnplus.setVisibility(View.VISIBLE);
+                    viewHolder.btnvalues.setText(String.valueOf(slmoi));
+                }
+            }
+        });
+        viewHolder.btnminus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int slmoi = Integer.parseInt(viewHolder.btnvalues.getText().toString())-1;
+                int slhientai= MainActivity2.manggiohang.get(i).getSoluongsp();
+                long giaht=MainActivity2.manggiohang.get(i).getGiasp();
+
+                MainActivity2.manggiohang.get(i).setSoluongsp(slmoi);       //2-600
+                long giamoi=(giaht*slmoi)/slhientai;                       //3-?
+                MainActivity2.manggiohang.get(i).setGiasp(giamoi);
+                DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+                viewHolder.txtgiagiohang.setText(decimalFormat.format(giamoi) + " Đ");
+                activity.giohang.evenutil();
+                if (slmoi<2){
+                    viewHolder.btnplus.setVisibility(View.VISIBLE);
+                    viewHolder.btnminus.setVisibility(View.INVISIBLE);
+                    viewHolder.btnvalues.setText(String.valueOf(slmoi));
+                }
+                else {
+                    viewHolder.btnminus.setVisibility(View.VISIBLE);
+                    viewHolder.btnplus.setVisibility(View.VISIBLE);
+                    viewHolder.btnvalues.setText(String.valueOf(slmoi));
+                }
+            }
+        });
         return view;
     }
 }

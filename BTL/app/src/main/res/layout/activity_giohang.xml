@@ -23,7 +23,7 @@
             android:layout_height="match_parent">
             <TextView
                 android:layout_gravity="center"
-                android:id="@+id/textviewthongbao"
+                android:id="@+id/txtviewthongbao"
                 android:textSize="30sp"
                 android:text="Giỏ hàng bạn đang trống"
                 android:layout_width="wrap_content"
@@ -52,9 +52,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
-                    android:textColor="#F20"
+                    android:textColor="@color/red"
                     android:text="Tổng tiền : "
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
@@ -64,25 +64,30 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
-                    android:textColor="#F44336"
+                    android:id="@+id/txtviewtongtien"
+                    android:textColor="@color/red"
                     android:text="Giá trị"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     <Button
-        android:textColor="@color/xanh"
+        android:textColor="@color/white"
         android:textSize="20sp"
+        android:backgroundTint="@color/red"
+        android:textStyle="bold"
         android:text="Thanh toán giỏ hàng"
         android:id="@+id/buttonthanhtoangiohang"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
     <Button
-        android:textColor="@color/xanh"
+        android:textColor="@color/red"
         android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/hongnhat"
         android:text="Tiếp tục mua hàng"
         android:id="@+id/buttontieptucmuahang"
         android:layout_weight="1"

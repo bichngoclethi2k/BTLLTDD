@@ -64,8 +64,10 @@
 
                 </Spinner>
                 <Button
-                    android:textColor="@color/red"
+                    android:backgroundTint="@color/red"
+                    android:textColor="@color/white"
                     android:text="Mua Ngay"
+                    android:textStyle="bold"
                     android:id="@+id/buttonmua"
                     android:textSize="15dp"
                     android:layout_width="match_parent"
