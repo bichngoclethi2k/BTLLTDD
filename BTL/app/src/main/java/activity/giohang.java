@@ -1,6 +1,7 @@
 package activity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,12 +19,14 @@ import com.example.btl.R;
 import java.text.DecimalFormat;
 
 import adapter.giohangadapter;
+import util.Checkconect;
 
 public class giohang extends AppCompatActivity {
     ListView listViewgiohang;
     TextView txtthongbao;
     static TextView txttongtien;
     Button btnthanhtoan;
+    Button btntieptucmua;
     Toolbar toolbargiohang;
     adapter.giohangadapter giohangadapter;
 
@@ -36,7 +39,28 @@ public class giohang extends AppCompatActivity {
         Checkdata();
         evenutil();
         DeletItem();
+        EventButton();
+    }
 
+    private void EventButton() {
+        btntieptucmua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+        btnthanhtoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (MainActivity2.manggiohang.size() > 0){
+                    Intent intent = new Intent(getApplicationContext(),thongtinkhachhang.class);
+                    startActivity(intent);
+                }else {
+                    Checkconect.showtoast_short(getApplicationContext(),"Giỏ hàng của bạn chưa có sản phẩm để thanh toán");
+                }
+            }
+        });
     }
 
 
@@ -122,6 +146,7 @@ public class giohang extends AppCompatActivity {
         txtthongbao=(TextView)findViewById(R.id.txtviewthongbao);
         txttongtien=(TextView)findViewById(R.id.txtviewtongtien);
         btnthanhtoan=(Button)findViewById(R.id.buttonthanhtoangiohang);
+        btntieptucmua=(Button)findViewById(R.id.buttontieptucmuahang);
         toolbargiohang=(Toolbar) findViewById(R.id.toolbargiohang);
         giohangadapter=new giohangadapter(activity.giohang.this,MainActivity2.manggiohang);
         listViewgiohang.setAdapter(giohangadapter);

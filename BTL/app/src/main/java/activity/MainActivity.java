@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this,
                         android.R.style.Theme_DeviceDefault_Light_Dialog);
-                builder.setTitle("Ban co muon thoat");
+                builder.setTitle("Bạn có muốn thoát?");
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                   @Override
                   public void onClick(DialogInterface dialog, int which) {
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Dialog dialog =new Dialog (MainActivity.this);
-                dialog.setTitle("From Dang Ky");
+                dialog.setTitle("Form Dang Ky");
                 dialog.setCancelable(false);
                 dialog.setContentView(R.layout.customdialog);
                 EditText edtusernamedk= (EditText)dialog.findViewById(R.id.usernamedk);
@@ -88,12 +88,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (edtusername.getText().length() !=0 && edtpasswd.getText().length()!=0){
                     if (edtusername.getText().toString().equals(ten)&& edtpasswd.getText().toString().equals(mk)){
-                        Toast.makeText(MainActivity.this,"Ban dn thanh cong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"Bạn đăng nhập thành công!", Toast.LENGTH_SHORT).show();
                         Intent intent= new Intent(MainActivity.this, MainActivity2.class);
                         startActivity(intent);
                     }
                     else if (edtusername.getText().toString().equals("ngoc")&& edtpasswd.getText().toString().equals("12345678")){
-                        Toast.makeText(MainActivity.this,"Ban dn thanh cong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"Bạn đăng nhập thành công!", Toast.LENGTH_SHORT).show();
                         Intent intent= new Intent(MainActivity.this,MainActivity2.class);
                         startActivity(intent);
                     }

@@ -54,7 +54,7 @@ public class lienheactivity extends AppCompatActivity {
 
         }
         else {
-            Checkconect.showtoast_short(getApplicationContext(),"Kiem tra lai ket noi INTERNET cua ban!");
+            Checkconect.showtoast_short(getApplicationContext(),"Kiểm tra lại kết nối INTERNET của bạn!");
             finish();
         }
 

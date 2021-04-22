@@ -32,7 +32,7 @@ import model.loaisp;
 import util.Checkconect;
 import util.server;
 
-public class thongtinactivity extends AppCompatActivity {
+public class  thongtinactivity extends AppCompatActivity {
 
     Toolbar toolbarthongtin;
     ListView listViewthongtinmenu;

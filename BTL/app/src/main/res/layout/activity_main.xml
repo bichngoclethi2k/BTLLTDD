@@ -13,7 +13,7 @@
     <TextView
         android:gravity="center"
         android:textSize="30dp"
-        android:text="Dang Nhap"
+        android:text="Đăng Nhập"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
@@ -36,20 +36,20 @@
         android:orientation="horizontal">
         <Button
             android:id="@+id/btndk"
-            android:text="Dang Ky"
+            android:text="Đăng Ký"
             android:layout_marginRight="30dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
         <Button
             android:id="@+id/btndn"
-            android:text="Dang Nhap"
+            android:text="Đăng Nhập"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
     </LinearLayout>
     <Button
         android:id="@+id/btnthoat"
         android:layout_marginTop="200dp"
-        android:text="Thoat"
+        android:text="Thoát"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

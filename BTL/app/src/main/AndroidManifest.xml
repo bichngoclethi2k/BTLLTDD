@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTL">
-        <activity android:name="activity.giohang"></activity>
+        <activity android:name="activity.thongtinkhachhang"></activity>
+        <activity android:name="activity.giohang" />
         <activity android:name="activity.chitietspactivity" />
         <activity android:name="activity.phukienactivity" />
         <activity android:name="activity.thongtinactivity" />
