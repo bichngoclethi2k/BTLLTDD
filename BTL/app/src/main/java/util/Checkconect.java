@@ -23,6 +23,6 @@ public class Checkconect {
         return haveConnectedWifi || haveConnectedMobile;
     }
     public static void showtoast_short(Context context, String thongbao){
-        Toast.makeText(context, "thogbao", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, thongbao, Toast.LENGTH_SHORT).show();
     }
 }

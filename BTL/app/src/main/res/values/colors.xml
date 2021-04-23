@@ -7,11 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="xanh">#ADD8E6</color>
+    <color name="xanh">  #fca997</color>//cam
     <color name="red">#B93F3F</color>
     <color name="xanhwhite">#CCFFFF</color>
     <color name="dennhat">#C0C0C0</color>
     <color name="xamnhat">#F2F2F2</color>
     <color name="hongnhat">#F6E2E2</color>
     <color name="xam">#6B7275</color>
+    <color name="cam">#ADD8E6</color>//xanh
 </resources>

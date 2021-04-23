@@ -1,13 +1,13 @@
 package activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -72,7 +72,7 @@ public class thongtinkhachhang extends AppCompatActivity {
                                         if (response.equals("1")){
                                             MainActivity2.manggiohang.clear();
                                             Checkconect.showtoast_short(getApplicationContext(),"Bạn đã thêm dữ liệu giỏ hàng thành công");
-                                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                                            Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
                                             startActivity(intent);
                                             Checkconect.showtoast_short(getApplicationContext(),"Mời bạn tiếp tục mua hàng");
                                         }else {
@@ -126,7 +126,7 @@ public class thongtinkhachhang extends AppCompatActivity {
                     };
                     requestQueue.add(stringRequest);
                 }else {
-                    Checkconect.showtoast_short(getApplicationContext(),"Hãy kiểm tra lại dữ liệu");
+                    Checkconect.showtoast_short(getApplicationContext(),"Vui Lòng Điền Đầy Đủ Thông Tin");
                 }
             }
         });

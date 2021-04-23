@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Dang Ky"
+        android:text="Đăng Ký "
         android:textSize="25dp"
         android:textStyle="bold"
         android:gravity="center"
@@ -32,12 +32,15 @@
         <Button
             android:id="@+id/btnhuy"
             android:layout_marginRight="15dp"
-            android:text=" Huy"
+            android:backgroundTint="@color/hongnhat"
+            android:textColor="@color/red"
+            android:text="Hủy"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
         <Button
             android:id="@+id/btndk1"
-            android:text="Dang ky"
+            android:backgroundTint="@color/red"
+            android:text="Đăng Ký"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"/>
 

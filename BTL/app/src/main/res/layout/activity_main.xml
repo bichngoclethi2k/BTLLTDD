@@ -6,52 +6,72 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:background="@drawable/background"
     tools:context="activity.MainActivity">
-
-
     <TextView
-        android:gravity="center"
-        android:textSize="30dp"
+        android:layout_marginLeft="110dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="65dp"
         android:text="Đăng Nhập"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/username"
-        android:hint="user name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
-
-        android:id="@+id/password"
-        android:hint="pass word"
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <LinearLayout
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btndk"
-            android:text="Đăng Ký"
-            android:layout_marginRight="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-        <Button
-            android:id="@+id/btndn"
-            android:text="Đăng Nhập"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
-    <Button
-        android:id="@+id/btnthoat"
-        android:layout_marginTop="200dp"
-        android:text="Thoát"
+        android:textStyle="bold"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:background="@drawable/boder"
+        android:orientation="vertical"
+        android:layout_width="225dp"
+        android:layout_height="250dp">
+
+        <EditText
+            android:id="@+id/username"
+            android:hint="user name"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/password"
+            android:hint="pass word"
+            android:layout_marginLeft="5dp"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btndk"
+                android:text="Đăng Ký"
+                android:backgroundTint="@color/red"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <Button
+                android:backgroundTint="@color/hongnhat"
+                android:textColor="@color/red"
+                android:id="@+id/btndn"
+                android:text="Đăng Nhập"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <Button
+                android:backgroundTint="@color/xamnhat"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/btnthoat"
+                android:text="Thoát"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
 
 
 
